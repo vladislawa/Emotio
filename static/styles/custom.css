@@ -1,0 +1,82 @@
+* {
+    font-family: Roboto, sans-serif;
+}
+
+img {
+    height: 300px;
+}
+
+.hero.is-primary {
+    background-color: #feb236 !important;
+}
+
+.navbar-link:link, .navbar-link:hover, a.navbar:link, a.navbar:visited, a.navbar:hover, a.navbar:active {
+    background-color: #feb236 !important;
+}
+
+a {
+    background-color: #feb236 !important;
+}
+
+.button.is-info {
+    background-color: #FB6034;
+}
+
+.button.is-info:hover {
+    background-color: #E04A27;
+}
+
+#chatbtn {
+    height: 50px;
+}
+
+#miniemotio{
+    width: 78px;
+    height: 98.408px;
+    position:fixed;
+    right: 20px;
+    bottom: 20px 
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+}
+
+input#textInput {
+    width: 200px;
+    height: 40px;
+    border-color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: none;
+    width: 500px;	
+	border: none;
+	border-radius: 20px;
+	outline: none;
+	padding: 10px;
+	font-size: 1em;
+	color: #676767;
+	transition: border 0.5s;
+	border: solid 3px #FB6034;	
+    box-sizing:border-box;
+    margin-bottom: 15px;
+}
+
+input[type=text]:focus {
+    border: 3px solid #FB6034;
+}
+
+#emotiochat {
+    width: 150px;
+    height: 189.247px;
+}
+
+span {
+    color: white;
+    width: 50%;
+}
+
+.navbar-menu {
+    margin-top: 30px;
+}

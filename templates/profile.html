@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Welcome, {{ name }}!
+</h1>
+
+<div align="center">
+  <form action="/video_stop" method="POST">
+    <button id="chatbtn" class="button is-block is-info">Press here to record the last emotion and chat with Emotio</button>
+  </form>
+  <br>
+  <img src="{{ url_for('video_feed') }}">
+</div>
+<audio controls autoplay>
+  <source src={{ url_for('static', filename='intro.mp3') }} type="audio/mpeg">
+</audio>
+<img id="miniemotio" src="{{ url_for('static', filename='Emotio-vid.png') }}" >
+
+<br>
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+<audio controls autoplay>
+    <source src={{ url_for('static', filename='chat.mp3') }} type="audio/mpeg">
+</audio>
+<h1>
+  Hi, {{ name }}! I thought you seem {{ emotion }}. Do you want to chat with me?
+</h1>
+<br> 
+
+{% block scripts %}
+    {% if emotion == 'neutral' %}
+        <audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 16000)">
+            <source src={{ url_for('static', filename='neutural.mp3') }} type="audio/mpeg">
+        </audio>
+    {% endif %}
+
+    {% if emotion == 'scared' %}
+        <audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 16000)">
+            <source src={{ url_for('static', filename='scared.mp3') }} type="audio/mpeg">
+        </audio>
+    {% endif %}
+
+    {% if emotion == 'happy' %}
+        <audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 16000)">
+            <source src={{ url_for('static', filename='happy.mp3') }} type="audio/mpeg">
+        </audio>
+    {% endif %}
+
+    {% if emotion == 'disgusted' %}
+        <audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 16000)">
+            <source src={{ url_for('static', filename='disgusted.mp3') }} type="audio/mpeg">
+        </audio>
+    {% endif %}
+
+    {% if emotion == 'angry' %}
+    <audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 16000)">
+        <source src={{ url_for('static', filename='angry.mp3') }} type="audio/mpeg">
+    </audio>    
+    {% endif %}
+
+    {% if emotion == 'sad' %}
+    <audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 16000)">
+        <source src={{ url_for('static', filename='sad.mp3') }} type="audio/mpeg">
+    </audio>    
+    {% endif %}
+
+    {% if emotion == 'surprised' %}
+    <audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 16000)">
+        <source src={{ url_for('static', filename='surprised.mp3') }} type="audio/mpeg">
+    </audio>    
+    {% endif %}
+
+    {% if emotion == '' %}
+    <audio controls="controls" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 16000)">
+        <source src={{ url_for('static', filename='neutural.mp3') }} type="audio/mpeg">
+    </audio>    
+    {% endif %}
+
+{% endblock %}
+
+<div class="box">
+    <br>
+    <img id="emotiochat" src="{{ url_for('static', filename='Emotio-chat.png') }}" alt="Emotio">
+    <div class="boxed">
+      <div>
+        <div id="chatbox">
+         <br><br> 
+          <p class="botText">
+            <span>Hi! I'm Emotio, I can identify your facial emotions and I am here to chat with you and be your friend.</span>
+          </p>
+        </div>
+        <br> <br> 
+        <div id="userInput">
+          <input id="textInput" type="text" name="msg" placeholder="Type your message and press Enter..." />
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for ('static', filename='js/chat.js')}}"></script>
+ </div>
+{% endblock %}

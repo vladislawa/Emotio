@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<img src="{{ url_for('static', filename='Emotio.png') }}">
+<br><br>
+<h1 class="title">
+  Emotio - Facial Emotion Recognition 
+</h1>
+<h2 class="subtitle">
+  Please turn on the volume on you computer to hear Emotio. Sign up and log in to proceed.
+</h2>
+<audio controls autoplay>
+  <source src={{ url_for('static', filename='main.mp3') }} type="audio/mpeg">
+</audio>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br><br>
+<audio controls autoplay>
+   <source src={{ url_for('static', filename='chatonly.mp3') }} type="audio/mpeg">
+ </audio>
+ <audio controls id="singsong">
+  <source src={{ url_for('static', filename='twinkle.mp3') }} type="audio/mpeg">
+</audio>
+<div class="box">
+  <br>
+   <img id="emotiochat" src="{{ url_for('static', filename='Emotio-chat.png') }}" alt="Emotio">
+    <div class="boxed">
+      <div>
+        <div id="chatbox">
+         <br><br> 
+          <p class="botText">
+            <span>Hi! I'm Emotio, I can identify your facial emotions and I am here to chat with you and be your friend. If you want me to identidy your emotions please click on "Identify emotion". </span>
+          </p>
+        </div>
+        <br> <br> 
+        <div id="userInput">
+          <input id="textInput" type="text" name="msg" placeholder="Type your message and press Enter..." />
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for ('static', filename='js/chat.js')}}"></script>
+ </div>
+{% endblock %}
